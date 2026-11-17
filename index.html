@@ -370,6 +370,7 @@ function setView(v){
   document.getElementById('tab-all').classList.toggle('active', v==='all');
   document.getElementById('view-cal').style.display = v==='cal' ? '' : 'none';
   document.getElementById('view-all').style.display = v==='all' ? '' : 'none';
+  if(v==='cal'){ document.getElementById('search').value=''; activeTag=null; renderTagbar(); applyFilters(); }
 }
 
 window.addEventListener('scroll',()=>{
